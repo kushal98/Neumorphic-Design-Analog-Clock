@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
-        <title>Javascript Clock</title>
-        <link rel="stylesheet" href="./index.css" />
-        <script data-ad-client="ca-pub-2675233634161374" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <meta charset="utf-8">
+        <title>JavaScript Clock UI Dark & Light Mode</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="clock">
@@ -17,24 +17,8 @@
                 <div class="sc" id="sc"></div>
             </div>
         </div>
-        <script type="text/javascript">
-            const deg = 6;
-            const hr = document.querySelector('#hr');
-            const mn = document.querySelector('#mn');
-            const sc = document.querySelector('#sc');
-
-            setInterval( () => {
-                let day = new Date();   
-                let hh = day.getHours() * 30;
-                let mm = day.getMinutes() * deg;
-                let ss = day.getSeconds() * deg;
-
-                hr.style.transform = `rotateZ(${(hh) + (mm/12)}deg)`;
-                mn.style.transform = `rotateZ(${(mm)}deg)`;
-                sc.style.transform = `rotateZ(${(ss)}deg)`;
-            });
-
-
-        </script>
+        <div class="toggleClass" onclick="toggleClass()"></div>
+        <script src="clock.js"></script>
+        <script src="toggle.js"></script>
     </body>
 </html>
